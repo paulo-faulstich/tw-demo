@@ -1,38 +1,44 @@
 // Export the loadHomeScreen function
 export default function loadHomeScreen(userData) {
     const app = document.getElementById('app');
-    
-    // Populate the home screen HTML
+
     app.innerHTML = `
         <div id="home-container">
-            <header>
+            <header class="home-header">
                 <div class="user-info">
                     <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
-                    <p>Good Evening, ${userData.name || 'User'}!</p>
-                    <p class="location">Santa Barbara, CA</p>
+                    <div class="user-text">
+                        <p class="greeting">Good Evening, ${userData.name || 'User'}!</p>
+                        <p class="location">Santa Barbara, CA</p>
+                    </div>
                 </div>
                 <div class="header-icons">
-                    <span class="search-icon">🔍</span>
-                    <span class="bell-icon">🔔</span>
+                    <span class="icon">🔍</span>
+                    <span class="icon">🔔</span>
                 </div>
             </header>
-            <main>
-                <div class="balance-container">
+            <main class="balance-section">
+                <div class="balance-card">
                     <p>Total Balance</p>
                     <p class="balance">${userData.balance || 0} TW Demo</p>
                 </div>
             </main>
-            <footer>
-                <div class="nav-item active">🏠 Discover</div>
-                <div class="nav-item">🛍️ Merchants</div>
-                <div class="nav-item">👛 Wallet</div>
+            <footer class="home-footer">
+                <div class="nav-item active">
+                    <span>🏠</span>
+                    <p>Discover</p>
+                </div>
+                <div class="nav-item">
+                    <span>🛍️</span>
+                    <p>Merchants</p>
+                </div>
+                <div class="nav-item">
+                    <span>👛</span>
+                    <p>Wallet</p>
+                </div>
             </footer>
         </div>
     `;
-
-    // Add additional functionality if needed (e.g., navigation or log out handlers)
-    setupLogOut();
-    setupNav();
 }
 
 // Handle Log Out button click

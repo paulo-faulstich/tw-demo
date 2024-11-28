@@ -1,40 +1,42 @@
 // Export the loadHomeScreen function
+// Export the loadHomeScreen function
 export default function loadHomeScreen(userData) {
     const app = document.getElementById('app');
-
+    
+    // Populate the home screen HTML
     app.innerHTML = `
         <div id="home-container">
-            <header class="home-header">
+            <header>
                 <div class="user-info">
                     <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
-                    <div class="user-text">
-                        <p class="greeting">Good Evening, ${userData.name || 'User'}!</p>
+                    <div>
+                        <p>Good Evening, ${userData.name || 'User'}!</p>
                         <p class="location">Santa Barbara, CA</p>
                     </div>
                 </div>
                 <div class="header-icons">
-                    <span class="icon">🔍</span>
-                    <span class="icon">🔔</span>
+                    <span class="search-icon">🔍</span>
+                    <span class="bell-icon">🔔</span>
                 </div>
             </header>
-            <main class="balance-section">
-                <div class="balance-card">
+            <main>
+                <div class="balance-container">
                     <p>Total Balance</p>
                     <p class="balance">${userData.balance || 0} TW Demo</p>
                 </div>
             </main>
-            <footer class="home-footer">
+            <footer>
                 <div class="nav-item active">
-                    <span>🏠</span>
-                    <p>Discover</p>
+                    🏠
+                    <span>Discover</span>
                 </div>
                 <div class="nav-item">
-                    <span>🛍️</span>
-                    <p>Merchants</p>
+                    🛍️
+                    <span>Merchants</span>
                 </div>
                 <div class="nav-item">
-                    <span>👛</span>
-                    <p>Wallet</p>
+                    👛
+                    <span>Wallet</span>
                 </div>
             </footer>
         </div>

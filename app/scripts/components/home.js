@@ -2,44 +2,44 @@
 // Export the loadHomeScreen function
 export default function loadHomeScreen(userData) {
     const app = document.getElementById('app');
-    
+
     // Populate the home screen HTML
     app.innerHTML = `
-        <div id="home-container">
-            <header>
-                <div class="user-info">
-                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
-                    <div>
-                        <p>Good Evening, ${userData.name || 'User'}!</p>
-                        <p class="location">Santa Barbara, CA</p>
-                    </div>
-                </div>
-                <div class="header-icons">
-                    <span class="search-icon">🔍</span>
-                    <span class="bell-icon">🔔</span>
-                </div>
-            </header>
-            <main>
-                <div class="balance-container">
-                    <p>Total Balance</p>
-                    <p class="balance">${userData.balance || 0} TW Demo</p>
-                </div>
-            </main>
-            <footer>
-                <div class="nav-item active">
-                    🏠
-                    <span>Discover</span>
-                </div>
-                <div class="nav-item">
-                    🛍️
-                    <span>Merchants</span>
-                </div>
-                <div class="nav-item">
-                    👛
-                    <span>Wallet</span>
-                </div>
-            </footer>
+    <div id="home-container">
+    <header>
+    <div class="user-info-container">
+        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+        <div class="user-info">
+            <p>Good Evening, ${userData.name || 'User'}!</p>
+            <p class="location">Santa Barbara, CA</p>
         </div>
+    </div>
+    <div class="header-icons">
+        <img src="./assets/icons/search.png" alt="Search">
+        <img src="./assets/icons/bell.png" alt="Notifications">
+    </div>
+</header>    
+    <main>
+        <div class="balance-container">
+            <p>Total Balance</p>
+            <p class="balance">${userData.balance || 0} TW Demo</p>
+        </div>
+    </main>
+    <footer>
+        <div class="nav-item">
+            <img src="./assets/icons/home.png" alt="Discover">
+            <span>Discover</span>
+        </div>
+        <div class="nav-item">
+            <img src="./assets/icons/merchants.png" alt="Merchants">
+            <span>Merchants</span>
+        </div>
+        <div class="nav-item">
+            <img src="./assets/icons/wallet.png" alt="Wallet">
+            <span>Wallet</span>
+        </div>
+    </footer>
+</div>   
     `;
 }
 

@@ -19,12 +19,13 @@ body, html {
   }
   
   .screen {
+    /*
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
+    padding: 20px; */
     height: 100%;
-    padding: 20px;
   }
   
   h1 {
@@ -37,9 +38,7 @@ body, html {
   
   p {
     font-size: 14px;
-    color: #666;
-    margin-bottom: 20px;
-    text-align: center;
+    color: #666;    
   }
   
   p a {
@@ -51,6 +50,12 @@ body, html {
     text-decoration: underline;
   }
   
+  .logo {
+    width: 120px; /* Adjust as needed */
+    margin: 80px auto; /* Center the logo */
+    display: block;
+}
+
   form {
     width: 100%;
     max-width: 320px;
@@ -135,7 +140,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 20px 18px;
   border-bottom: 1px solid #ddd; /* Light line separator */
   box-sizing: border-box;
 }
@@ -143,33 +148,31 @@ header {
 .user-info-container {
   display: flex;
   align-items: center;
-  gap: 10px; /* Space between avatar and text */
+  gap: 14px; /* Space between avatar and text */
 }
-
-.user-info p { 
-  text-align: left;
-}
-
 
 .user-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2px; /* Small space between name and location */
+  gap: 5px; /* Small space between name and location */
 }
 
-.user-info p {
-  margin: 0;
-  font-size: 14px; /* Consistent font size */
+.user-info .name {
+  margin: 0;  
   color: #666; /* Light text color */
 }
+
+.user-info .location {
+  margin: 0;
+  font-weight: bold; /* Smaller font size for location */  
+} 
 
 .user-info img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
-
 
 .user-avatar {
   width: 40px;
@@ -186,11 +189,6 @@ header {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
-}
-
-.location {
-  font-size: 12px; /* Smaller font size for location */
-  color: #999;
 }
 
 .header-icons {
@@ -214,7 +212,7 @@ header {
   margin: 10px auto; /* Adjusts the margin for better spacing */
   background-color: #f5f5f5; /* Matches the light gray background */
   border-radius: 15px; /* Rounded corners */
-  padding: 20px; /* Adds internal spacing */
+  padding: 10px; /* Adds internal spacing */
   text-align: center;
   width: 85%; /* Ensures proper width for the container */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
@@ -270,7 +268,8 @@ header {
 }
 
 .nav-item:hover {
-  color: #0056b3;
+  /* color: #0056b3; */
+  cursor: pointer;
 }
 
 main {

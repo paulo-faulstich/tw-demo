@@ -2,15 +2,15 @@
 // Export the loadHomeScreen function
 export default function loadHomeScreen(userData) {
     const app = document.getElementById('app');
-
+    const firstName = userData.name ? userData.name.split(' ')[0] : 'User';
     // Populate the home screen HTML
     app.innerHTML = `
     <div id="home-container">
     <header>
     <div class="user-info-container">
-        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+        <img src="./assets/icons/avatar.png" alt="User Avatar" class="user-avatar">
         <div class="user-info">
-            <p>Good Evening, ${userData.name || 'User'}!</p>
+            <p class="name">Good Evening, ${firstName || 'User'}!</p>
             <p class="location">Santa Barbara, CA</p>
         </div>
     </div>

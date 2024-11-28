@@ -1,13 +1,14 @@
 export default function loadSignupScreen() {
     const appContainer = document.getElementById('app'); // Reference to the main app container
     appContainer.innerHTML = `
-        <div class="signup-screen">
-            <h2>Create your account</h2>
-            <p>Already have an account? <a href="#" id="login-link">Log in</a></p>
+        <div class="signup-container">
+            <img src="assets/icons/logo.png" alt="Twism Logo" class="logo">
+            <h1>Create your account</h1>
+            <p>Already have an account? <a href="#">Log in</a></p>
             <form id="signup-form">
-                <input type="text" id="name" placeholder="Name" required />
-                <input type="email" id="email" placeholder="Email" required />
-                <input type="password" id="password" placeholder="Password" required />
+                <input type="text" id="name" placeholder="Name">
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Password">
                 <button type="submit">Sign Up</button>
             </form>
         </div>

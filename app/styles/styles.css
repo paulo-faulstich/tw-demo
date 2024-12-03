@@ -177,12 +177,17 @@ body, html {
     background-color: #0056b3;
   }
   
-footer {
-  display: flex;
-  justify-content: space-around; /* Distributes nav items evenly */
-  align-items: center;
-  height: 70px; /* Fixed height for footer */
-  border-top: 1px solid #ddd; /* Subtle border for separation */
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 0;
+    position: absolute; /* Change to absolute */
+    bottom: 0; /* Position at the bottom */
+    width: 100%; /* Ensure it fits the width of the container */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensure it appears above other content */
 }
 
 /* Home Screen */

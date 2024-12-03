@@ -80,13 +80,26 @@
 .activity-item {
     display: flex;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #004aad;
+    margin-bottom: 10px; /* Space between rows */
+}
+
+.activity-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.activity-link {
+    margin-left: auto; /* Push link to the right */
+    color: #007bff;
+    text-decoration: none;
 }
 
 .activity-icon {
-    font-size: 24px;
-    margin-right: 10px;
+    width: 20px; /* Adjust size */
+    height: 20px;
+    margin-right: 10px; /* Space between icon and text */
+    vertical-align: middle; /* Align with text */
 }
 
 .activity-details {
@@ -100,4 +113,31 @@
 
 .activity-link:hover {
     text-decoration: underline;
+}
+
+.wallet-box {
+    display: flex;
+    align-items: center;
+    background-color: #002766;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    color: #ffffff;
+}
+
+.wallet-box img {
+    width: 50px; /* Adjust size */
+    height: 50px;
+    margin-right: 15px; /* Space between image and text */
+}
+
+.wallet-box-text {
+    text-align: left;
+}
+
+.wallet-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
 }

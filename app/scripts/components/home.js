@@ -114,15 +114,15 @@ function loadWalletScreen() {
         <div class="wallet-activity">
             <h2 class="activity-title">ACTIVITY</h2>
             <div class="activity-item">
-                <span class="activity-icon"><img src="./assets/icons/receive-white.png" alt="Token Icon"></span>
-                <div class="activity-details">
+                <img src="./assets/icons/receive-white.png" alt="Activity Icon">
+                <div>
                     <p>Received</p>
                     <p>Dec 12, <a href="#" class="activity-link">See on Polygon</a></p>
                 </div>
             </div>
             <div class="activity-item">
-                <span class="activity-icon"><span class="activity-icon"><img src="./assets/icons/send-white.png" alt="Token Icon"></span>
-                <div class="activity-details">
+                <img src="./assets/icons/receive-white.png" alt="Activity Icon">
+                <div>
                     <p>Received</p>
                     <p>Dec 12, <a href="#" class="activity-link">See on Polygon</a></p>
                 </div>

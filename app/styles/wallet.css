@@ -1,0 +1,103 @@
+/* Wallet Screen Styles */
+.wallet-screen {
+    background-color: #001f4d;
+    color: #ffffff;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.wallet-header {
+    background: linear-gradient(90deg, #004aad, #0064ff);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wallet-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.wallet-details {
+    text-align: center;
+}
+
+.wallet-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.wallet-amount {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.wallet-usd {
+    font-size: 16px;
+    color: #b0c4de;
+}
+
+.wallet-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.wallet-action-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0064ff;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.wallet-action-btn:hover {
+    background-color: #004aad;
+}
+
+.wallet-activity {
+    padding: 10px;
+}
+
+.activity-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #004aad;
+}
+
+.activity-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.activity-details {
+    color: #b0c4de;
+}
+
+.activity-link {
+    color: #4daaff;
+    text-decoration: none;
+}
+
+.activity-link:hover {
+    text-decoration: underline;
+}

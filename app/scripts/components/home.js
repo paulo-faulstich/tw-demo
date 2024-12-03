@@ -79,13 +79,58 @@ function setupLogOut() {
 
 // Navigation logic for footer tabs (example)
 function setupNav() {
+    consoler.log("HEREEEEE")
     const navItems = document.querySelectorAll('.nav-item');
     navItems.forEach((navItem, index) => {
         navItem.addEventListener('click', () => {
-            alert(`Navigating to tab ${index + 1}`);
+            if (index === 2) {
+                // Load Wallet Screen when the wallet nav item is clicked
+                loadWalletScreen();
+            } else {
+                alert(`Navigating to tab ${index + 1}`);
+            }
         });
     });
 }
+
+function loadWalletScreen() {
+    const app = document.getElementById('app');
+    app.innerHTML = `
+    <div class="wallet-screen">
+        <div class="wallet-header">
+            <div class="wallet-balance">
+                <img src="./assets/icons/token-icon.png" alt="Token Icon" class="wallet-icon">
+                <div class="wallet-details">
+                    <p class="wallet-name">Twism Token (Tw Demo)</p>
+                    <p class="wallet-amount">2000 Tw Demo</p>
+                    <p class="wallet-usd">$956.01</p>
+                </div>
+            </div>
+            <div class="wallet-actions">
+                <button class="wallet-action-btn">Send</button>
+                <button class="wallet-action-btn">Receive</button>
+            </div>
+        </div>
+        <div class="wallet-activity">
+            <h2 class="activity-title">ACTIVITY</h2>
+            <div class="activity-item">
+                <span class="activity-icon">🔄</span>
+                <div class="activity-details">
+                    <p>Received</p>
+                    <p>Dec 12, <a href="#" class="activity-link">See on Polygon</a></p>
+                </div>
+            </div>
+            <div class="activity-item">
+                <span class="activity-icon">🔄</span>
+                <div class="activity-details">
+                    <p>Received</p>
+                    <p>Dec 12, <a href="#" class="activity-link">See on Polygon</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    `;
+    }
 
 function setupModalHandlers(userData) {
     const modal = document.getElementById('wallet-modal');
@@ -95,15 +140,6 @@ function setupModalHandlers(userData) {
     const toggleKeyBtn = document.getElementById('toggle-key-btn');
     const walletAddress = document.getElementById('wallet-address');
     const privateKey = document.getElementById('private-key');
-
-    console.log(modal);
-    console.log(openModalBtn);
-    console.log(closeModalBtn);
-    console.log(copyAddressBtn);
-    console.log(toggleKeyBtn);
-    console.log(walletAddress);
-    console.log(privateKey);
-
 
     // Ensure all required elements exist
     if (!modal || !openModalBtn || !closeModalBtn || !copyAddressBtn || !toggleKeyBtn || !walletAddress || !privateKey) {
@@ -145,4 +181,6 @@ function setupModalHandlers(userData) {
             privateKey.textContent = '******';
         }
     });
+
+    // Add wallet screen HTML
 }

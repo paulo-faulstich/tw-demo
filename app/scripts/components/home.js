@@ -58,7 +58,8 @@ export default function loadHomeScreen(userData) {
 </div>
     `;
     
-    setupModalHandlers(userData);
+    setupModalHandlers(userData); // Initialize the modal
+    setupNav(); // Reinitialize navigation
 }
 
 // Handle Log Out button click
@@ -79,7 +80,6 @@ function setupLogOut() {
 
 // Navigation logic for footer tabs (example)
 function setupNav() {
-    consoler.log("HEREEEEE")
     const navItems = document.querySelectorAll('.nav-item');
     navItems.forEach((navItem, index) => {
         navItem.addEventListener('click', () => {
@@ -99,7 +99,7 @@ function loadWalletScreen() {
     <div class="wallet-screen">
         <div class="wallet-header">
             <div class="wallet-balance">
-                <img src="./assets/icons/token-icon.png" alt="Token Icon" class="wallet-icon">
+                <img src="./assets/icons/token.png" alt="Token Icon" class="wallet-icon">
                 <div class="wallet-details">
                     <p class="wallet-name">Twism Token (Tw Demo)</p>
                     <p class="wallet-amount">2000 Tw Demo</p>
@@ -114,14 +114,14 @@ function loadWalletScreen() {
         <div class="wallet-activity">
             <h2 class="activity-title">ACTIVITY</h2>
             <div class="activity-item">
-                <span class="activity-icon">🔄</span>
+                <span class="activity-icon"><img src="./assets/icons/receive-white.png" alt="Token Icon"></span>
                 <div class="activity-details">
                     <p>Received</p>
                     <p>Dec 12, <a href="#" class="activity-link">See on Polygon</a></p>
                 </div>
             </div>
             <div class="activity-item">
-                <span class="activity-icon">🔄</span>
+                <span class="activity-icon"><span class="activity-icon"><img src="./assets/icons/send-white.png" alt="Token Icon"></span>
                 <div class="activity-details">
                     <p>Received</p>
                     <p>Dec 12, <a href="#" class="activity-link">See on Polygon</a></p>

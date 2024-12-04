@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,33 @@
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/wallet.css">
 </head>
+
 <body>
   <div class="mockup">
-    <div class="screen" id="app">
-      <!-- Content for the current screen will be dynamically added here -->
+    <div id="app">
+      <div id="screen-container"></div>
+      <footer id="navbar">
+        <div class="nav-item" id="home-nav">
+          <img src="./assets/icons/home.png" alt="Discover">
+          <span>Discover</span>
+        </div>
+        <div class="nav-item" id="merchants-nav">
+          <img src="./assets/icons/merchants.png" alt="Merchants">
+          <span>Merchants</span>
+        </div>
+        <div class="nav-item" id="wallet-nav">
+          <img src="./assets/icons/wallet.png" alt="Wallet">
+          <span>Wallet</span>
+        </div>
+      </footer>
     </div>
   </div>
 
   <script src="scripts/main.js" type="module"></script>
+  <!--
+  <script src="scripts/components/navbar.js"></script>
+  <script src="scripts/components/home.js"></script>
+  -->
 </body>
+
 </html>

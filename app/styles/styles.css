@@ -1,223 +1,106 @@
 /* General Reset */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-  }
-  
-  .mockup {
-    position: relative;
-    width: 375px;
-    height: 812px;
-    margin: 5% auto;
-    background-color: #fff;
-    border-radius: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .screen {
-    /*
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
-    padding: 20px; */
-    height: 100%;
-  }
-  
-  h1 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #000;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  p {
-    font-size: 14px;
-  }
-  
-  p a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  p a:hover {
-    text-decoration: underline;
-  }
-  
-  .logo {
-    width: 120px; /* Adjust as needed */
-    margin: 80px auto; /* Center the logo */
-    display: block;
+body, html, p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;  
 }
 
-
-  form {
-    width: 100%;
-    max-width: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  form input {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 16px;
-    background-color: #f0f0f0;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  }
-  
-  form input:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-
-  .signup-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    height: 100%;
+/* Mockup Container */
+.mockup {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  margin: 5% auto;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.signup-container h1 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #000;
-    margin-bottom: 10px;
-    text-align: center;
+/* Screen Content */
+.screen {
+  height: 100%;
 }
 
-.signup-container p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 20px;
-    text-align: center;
+/* Forms and Buttons */
+form {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.signup-container p a {
-    color: #007bff;
-    text-decoration: none;
+form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.signup-container p a:hover {
-    text-decoration: underline;
+form input:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
-.signup-container form {
-    width: 100%;
-    max-width: 280px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Global Footer Navigation */
+footer#navbar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  z-index: 100;
 }
 
-.signup-container form input {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 16px;
-    background-color: #f0f0f0;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  color: #666;
+  font-size: 12px; /* Slightly reduced to match mockup */
+  gap: 4px; /* Adjusted spacing between icon and label */
 }
 
-.signup-container form input:focus {
-    border-color: #007bff;
-    outline: none;
+.nav-item img {
+  height: 24px; /* Set uniform icon size */
+  width: 24px;
 }
 
-.signup-container button {
-    width: 115%;
-    padding: 15px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.nav-item.active {
+  color: #007bff;
 }
 
-.signup-container button:hover {
-    background-color: #0056b3;
+.nav-item:hover {
+  cursor: pointer;
 }
 
-.signup-container .signup-logo {
-  margin-bottom: 100px;
-} 
-  
-  button {
-    width: 115%; /* Make button width match the input fields */
-    padding: 15px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    box-sizing: border-box; /* Ensure proper padding within the width */
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 10px 0;
-    position: absolute; /* Change to absolute */
-    bottom: 0; /* Position at the bottom */
-    width: 100%; /* Ensure it fits the width of the container */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 10; /* Ensure it appears above other content */
+/*
+#screen-containe {
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: calc(100vh - 60px); /* Adjust height to account for the navbar */
+  padding-bottom: 10px; /* Avoid content cutting off at the bottom */
 }
+*/
 
 /* Home Screen */
 #home-container {
   display: flex;
-  flex-direction: column; /* Ensures header, main, and footer are stacked */
-  justify-content: space-between; /* Space between header, main, and footer */
-  height: 100%; /* Ensures the container takes up the full mockup height */
-  box-sizing: border-box; /* Includes padding/borders in total height */
-}
-
-.home-header {
-  display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.header-icons {
-  display: flex;
-  gap: 10px; /* Add spacing between the icons */
-  align-items: center;
-  justify-content: flex-end; /* Align icons to the right */
-}
-
-.icon {
-  width: 24px; /* Adjust icon size */
-  height: 24px;
-  cursor: pointer; /* Optional: make the icons clickable */
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 header {
@@ -225,37 +108,27 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 18px;
-  border-bottom: 1px solid #ddd; /* Light line separator */
+  border-bottom: 1px solid #ddd;
   box-sizing: border-box;
 }
 
 .user-info-container {
   display: flex;
   align-items: center;
-  gap: 14px; /* Space between avatar and text */
+  gap: 14px;
 }
 
 .user-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px; /* Small space between name and location */
+ 
 }
 
 .user-info .name {
-  margin: 0;  
-  color: #666; /* Light text color */
+  margin: 4px;
 }
 
 .user-info .location {
-  margin: 0;
-  font-weight: bold; /* Smaller font size for location */  
-} 
-
-.user-info img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  margin: 4px;
+  font-weight: bold;
 }
 
 .user-avatar-img {
@@ -265,183 +138,137 @@ header {
   cursor: pointer;
 }
 
-.user-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.greeting {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.header-icons {
-  display: flex;
-  align-items: center;
-  gap: 15px; /* Space between icons */
-}
-
-.header-icons img {
-  width: 24px; /* Icon size */
-  height: 24px;
-  cursor: pointer;
-}
-
-.icon {
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.balance-container {
-  margin: 10px auto; /* Adjusts the margin for better spacing */
-  background-color: #f5f5f5; /* Matches the light gray background */
-  border-radius: 15px; /* Rounded corners */
-  padding: 10px; /* Adds internal spacing */
-  text-align: center;
-  width: 85%; /* Ensures proper width for the container */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
-}
-
-.balance-section {
-  display: flex;
-  justify-content: center;
+/* General Carousel Container */
+.carousel-container {
   padding: 20px;
 }
 
-.balance-card {
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  padding: 20px;
-  width: 90%;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.balance {
-  font-size: 24px;
-  font-weight: bold;
-  color: #007bff;
-}
-
-.home-footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px 0;
-  border-top: 1px solid #ddd;
-}
-
-.nav-item {
-  display: flex;
-  flex-direction: column; /* Ensures icon and label are stacked */
-  align-items: center; /* Centers the content */
-  justify-content: center;
-  margin: 0 15px; /* Adjusts spacing between items */
-  color: #666;
-  font-size: 14px; /* Adjust label size */
-  gap: 5px; /* Adds consistent spacing between icon and label */
-}
-
-.nav-item img {
-  height: 24px; /* Sets the icon height */
-  width: 24px; /* Sets the icon width */
-}
-
-.nav-item.active {
-  color: #007bff;
-}
-
-.nav-item:hover {
-  /* color: #0056b3; */
-  cursor: pointer;
-}
-
-main {
-  flex-grow: 1; /* Allows the main content to expand and take up remaining space */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* Aligns the balance container towards the top */
-  padding-top: 10px; /* Adds a small space from the header */
-}
-
-/* Wallet Modal */
-.wallet-modal {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */  
-  z-index: 1000; /* Make sure it's above all other content */
-}
-
-/* Style the modal content */
-.wallet-modal-content {
-  width: 70%; /* Set the width to 70% of the mockup */
-  height: 96%; /* Adjust height to fit the mockup */
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  text-align: left;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  
-}
-
-.hidden {
-  transform: translateX(100%);
-}
-
-.wallet-modal.show {
-  transform: translateX(0);
-}
-
-.close-modal-btn {
-  max-width: 20px;
-  border: none;
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.wallet-info, .private-key {
+.carousel-section {
   margin-bottom: 20px;
 }
 
-.wallet-info p, .private-key p {
+.carousel-section h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-section h2 span {
   font-size: 16px;
-  margin: 10px 0;
+  color: #ffcc00;
 }
 
-.wallet-info button, .private-key button {
-  padding: 10px 20px;
+.carousel-section .view-all-link {
   font-size: 14px;
-  border: none;
-  border-radius: 10px;
-  background-color: #007bff;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.wallet-info button:hover, .private-key button:hover {
-  background-color: #0056b3;
-}
-
-.wallet-link {
   color: #007bff;
   text-decoration: none;
 }
 
-.wallet-link:hover {
+.carousel-section .view-all-link:hover {
   text-decoration: underline;
 }
 
-.toggle-key-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 10px;
+/* Carousel Styles */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 15px; /* Add spacing between carousel items */
+  padding: 10px 0;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  text-align: center;
+  color: #333;
+}
+
+.carousel-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.carousel-item p {
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Specific Styling for Offer Items */
+/* Offers & Deals Section */
+.offer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  min-width: calc(100% / 3); /* Each card takes up 1/3 of the carousel width */
+  max-width: calc(100% / 3); /* Maintain consistent width */
+  overflow: hidden;
+  margin-right: 10px; /* Add spacing between cards */
+}
+
+.offer-item img {
+  width: 100%; /* Ensure image fits within the card */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 80px; /* Restrict height for consistency */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.offer-title {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.offer-details {
+  font-size: 12px;
+  color: #777;
+}
+
+.offer-distance {
+  font-size: 10px;
+  color: #999;
+}
+
+/* Merchants Nearby Section */
+.merchant-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2; /* Light gray background */
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 90px; /* Adjust width */
+  height: 110px; /* Adjust height */
+  margin: 5px; /* Add spacing between cards */
+}
+
+.merchant-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.merchant-item .merchant-label {
+  position: absolute;
+  top: 50%; /* Place the label vertically centered */
+  left: 10px;
+  right: 10px;
+  text-align: center;
+  font-size: 10px;
+  color: #666;
+  background-color: transparent; /* Remove unnecessary gray area */
 }

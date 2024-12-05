@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const userData = {
         name: 'Paulo Faulstich',
         balance: 0,
-        location: 'Santa Barbara, RS',
+        location: 'Santa Barbara, CA',
         spots: [
             { name: 'Twilight Spirits', image: './assets/images/spots/spot1.png' },
             { name: 'Morning Brew', image: './assets/images/spots/spot2.png' },
             { name: 'Tranquil SPA', image: './assets/images/spots/spot3.png' },
-            { name: 'Tranquil SPA', image: './assets/images/spots/spot3.png' },
-            { name: 'Tranquil SPA', image: './assets/images/spots/spot3.png' },
+            { name: 'Elegance Gem', image: './assets/images/spots/spot4.png' },
+            { name: 'Pulse Fit', image: './assets/images/spots/spot5.png' },
         ],
         offers: [
             { title: 'Save 20% Off Your First Purchase', details: 'Cuso\'s Bikes', distance: '4054.74', image: './assets/images/offers/offer1.png' },
@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         merchants: [
             { name: 'Cuso\'s Bikes', image: './assets/images/merchants/merchant1.png' },
             { name: 'Monarca Wings', image: './assets/images/merchants/merchant2.png' },
-            { name: 'Monarca Wings', image: './assets/images/merchants/merchant2.png' },
-            { name: 'Monarca Wings', image: './assets/images/merchants/merchant2.png' },
+            { name: 'Freshy Bakery', image: './assets/images/merchants/merchant3.png' },
+            { name: 'Wanderlux', image: './assets/images/merchants/merchant4.png' },
         ]
     };
 
